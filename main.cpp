@@ -104,7 +104,6 @@ void evaluate(string s) {
             numStack.push(value);
             first ++;
 
-
         } else if (s[first] == '(') {
             // Push ( onto opStack
             // Increment "first"
@@ -154,9 +153,10 @@ int main() {
     string
         expression;
 
+    // Take in expression and evaluate it
     while (getline(cin, expression)) {
-            evaluate(expression);
+        if (expression == "#")
+            return 0;
+        evaluate(expression);
     }
-
-    return 0;
 }
