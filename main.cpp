@@ -102,7 +102,6 @@ void evaluate(string s) {
             }
 
             numStack.push(value);
-            first ++;
 
         } else if (s[first] == '(') {
             // Push ( onto opStack
